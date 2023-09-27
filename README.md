@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# React TODO App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the React TODO App, your assignment as a Frontend Developer Intern! In this project, you'll be creating an offline TODO App for the browser using React JS. This README will guide you through the task, key features required, and expectations.
 
-## Available Scripts
+## Task Description
 
-In the project directory, you can run:
+Your task is to create a TODO application with the following features:
 
-### `npm start`
+1. **Input Bar**: Provide a simple input bar where users can add TODO items by pressing the return key.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **TODO List**: Display a list of TODO cards. Each card should represent a TODO item and should be appended to the list when created.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Mark as Complete**: Users should be able to mark a TODO item as complete by clicking on it. Once marked complete, the item should move to the bottom of the list.
 
-### `npm test`
+4. **Sorting**: Active TODO cards should appear in the order of creation, with the most recent on top. Completed TODO cards should appear in the order of completion, with the most recent on top.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. **Reset Button**: Include a reset button in the top right corner of the app. Clicking this button should clear all TODO items and return the app to its initial state.
 
-### `npm run build`
+6. **Offline Support**: Ensure that hitting the refresh button (including a hard refresh) in the browser does not cause any change in the state of the app. It should work like a regular offline app.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Expectations
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Here's what we expect from your work:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **UI/UX Skills**: Demonstrate your UI/UX skills in designing a clean and user-friendly interface for the TODO app.
 
-### `npm run eject`
+- **Functionality**: Ensure that all the specified features work as expected. Users should be able to add, complete, and reset TODO items seamlessly.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Additional Features**: If you have time, feel free to add any additional utility or UX features that enhance the user experience. Creativity is appreciated!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Browser Compatibility**: The app should work in the latest versions of Google Chrome and Mozilla Firefox.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
