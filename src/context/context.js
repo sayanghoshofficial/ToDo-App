@@ -23,7 +23,7 @@ function CustomItemProvider({ children }) {
     // Function to add a new todo
     const addTodo = () => {
         if (todoText.trim() !== '') {
-            setTodos([...todos, { text: todoText, completed: false }]);
+            setTodos([{ text: todoText, completed: false },...todos]);
             setTodoText('');
         }
     };

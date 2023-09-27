@@ -1,33 +1,21 @@
 import React from 'react';
 import { useValue } from '../context/context';
+import TodoForm from './TodoForm';
+import TodoItem from './TodoItem';
 
 function TodoApp() {
 
-    const { addTodo, toggleTodo, removeTodo, todos, todoText, setTodoText } = useValue();
+    const { todos } = useValue();
 
 
 
     return (
         <div className="todo-app">
             <h1>Todo App</h1>
-            <div className="todo-form">
-                <input
-                    type="text"
-                    placeholder="Add a new todo"
-                    value={todoText}
-                    onChange={(e) => setTodoText(e.target.value)}
-                    onKeyPress={(e) => {
-                        if (e.key === 'Enter') addTodo();
-                    }}
-                />
-                <button onClick={addTodo}>Add</button>
-            </div>
+            <TodoForm />
             <div className="todo-list">
                 {todos.map((todo, index) => (
-                    <div key={index} className={`todo-item ${todo.completed ? 'completed' : ''}`}>
-                        <span onClick={() => toggleTodo(index)}>{todo.text}</span>
-                        <button onClick={() => removeTodo(index)}>Delete</button>
-                    </div>
+                    <TodoItem key={index} todo={todo} index={index} />
                 ))}
             </div>
         </div>
