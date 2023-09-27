@@ -15,6 +15,7 @@ function CustomItemProvider({ children }) {
     const storedTodos = JSON.parse(localStorage.getItem("todos")) || [];
     const [todos, setTodos] = useState(storedTodos);
     const [todoText, setTodoText] = useState('');
+    const [allCompleted, setAllCompleted] = useState(false);
 
     useEffect(() => {
         localStorage.setItem("todos", JSON.stringify(todos));
@@ -23,10 +24,11 @@ function CustomItemProvider({ children }) {
     // Function to add a new todo
     const addTodo = () => {
         if (todoText.trim() !== '') {
-            setTodos([{ text: todoText, completed: false },...todos]);
+            setTodos([{ text: todoText, completed: false }, ...todos]);
             setTodoText('');
         }
     };
+
 
     // Function to toggle the completion status of a todo
     const toggleTodo = (index) => {
@@ -42,11 +44,46 @@ function CustomItemProvider({ children }) {
         setTodos(updatedTodos);
     };
 
+    // Function to set completed all
+    const setAllToCompleted = () => {
+        if (allCompleted) {
+            // If all todos are currently completed, set all to false
+            const updatedTodos = todos.map((todo) => ({
+                ...todo,
+                completed: false,
+            }));
+            setTodos(updatedTodos);
+        } else {
+            // If all todos are not completed, set all to true
+            const updatedTodos = todos.map((todo) => ({
+                ...todo,
+                completed: true,
+            }));
+            setTodos(updatedTodos);
+        }
 
+        // Toggle the allCompleted state
+        setAllCompleted(!allCompleted);
+    };
 
+    // Function for delete all
+    const deleteAllTodos = () => {
+        // Delete all todos by setting the todos array to an empty array
+        setTodos([]);
+      };
 
     return (
-        <itemContext.Provider value={{ addTodo, toggleTodo, removeTodo, todos, setTodos, todoText, setTodoText }}>
+        <itemContext.Provider value={{
+            addTodo,
+            toggleTodo,
+            removeTodo,
+            todos,
+            setTodos,
+            todoText,
+            setTodoText,
+            setAllToCompleted,
+            deleteAllTodos
+        }}>
             {children}
         </itemContext.Provider>
     )
