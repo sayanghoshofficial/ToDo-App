@@ -4,6 +4,7 @@ import { AiFillDelete } from 'react-icons/ai';
 
 const TodoItem = ({ todo, index }) => {
     const { toggleTodo, removeTodo } = useValue();
+    
     return (
         <div key={index} className={`todo-item ${todo.completed ? 'completed' : ''}`}>
             <span onClick={() => toggleTodo(index)}>{todo.text}</span>

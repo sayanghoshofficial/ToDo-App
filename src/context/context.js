@@ -13,8 +13,6 @@ function useValue() {
 
 function CustomItemProvider({ children }) {
     const localTodos = JSON.parse(localStorage.getItem("todos")) || [];
-
-
     const [todos, setTodos] = useState(localTodos);
     const [todoText, setTodoText] = useState('');
     const [allCompleted, setAllCompleted] = useState(false);
@@ -93,3 +91,4 @@ function CustomItemProvider({ children }) {
 
 export default CustomItemProvider;
 export { useValue };
+
