@@ -12,8 +12,10 @@ function useValue() {
 
 
 function CustomItemProvider({ children }) {
-    const storedTodos = JSON.parse(localStorage.getItem("todos")) || [];
-    const [todos, setTodos] = useState(storedTodos);
+    const localTodos = JSON.parse(localStorage.getItem("todos")) || [];
+
+
+    const [todos, setTodos] = useState(localTodos);
     const [todoText, setTodoText] = useState('');
     const [allCompleted, setAllCompleted] = useState(false);
 
@@ -70,7 +72,7 @@ function CustomItemProvider({ children }) {
     const deleteAllTodos = () => {
         // Delete all todos by setting the todos array to an empty array
         setTodos([]);
-      };
+    };
 
     return (
         <itemContext.Provider value={{
