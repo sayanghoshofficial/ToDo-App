@@ -1,5 +1,11 @@
 # React TODO App
 
+This is the Hosting Page [Todo App](https://sayanghoshofficial.github.io/ToDo-App)
+
+![App UI](https://github.com/sayanghoshofficial/ToDo-App/assets/99132893/929c1632-a85c-4fa5-983f-36935131ea23)
+
+
+
 Welcome to the React TODO App, your assignment as a Frontend Developer Intern! In this project, you'll be creating an offline TODO App for the browser using React JS. This README will guide you through the task, key features required, and expectations.
 
 ## Task Description
@@ -18,15 +24,4 @@ Your task is to create a TODO application with the following features:
 
 6. **Offline Support**: Ensure that hitting the refresh button (including a hard refresh) in the browser does not cause any change in the state of the app. It should work like a regular offline app.
 
-## Expectations
-
-Here's what we expect from your work:
-
-- **UI/UX Skills**: Demonstrate your UI/UX skills in designing a clean and user-friendly interface for the TODO app.
-
-- **Functionality**: Ensure that all the specified features work as expected. Users should be able to add, complete, and reset TODO items seamlessly.
-
-- **Additional Features**: If you have time, feel free to add any additional utility or UX features that enhance the user experience. Creativity is appreciated!
-
-- **Browser Compatibility**: The app should work in the latest versions of Google Chrome and Mozilla Firefox.
 
