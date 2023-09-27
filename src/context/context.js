@@ -13,7 +13,7 @@ function useValue() {
 
 function CustomItemProvider({ children }) {
     const storedTodos = JSON.parse(localStorage.getItem("todos")) || [];
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState(storedTodos);
     const [todoText, setTodoText] = useState('');
 
     useEffect(() => {
